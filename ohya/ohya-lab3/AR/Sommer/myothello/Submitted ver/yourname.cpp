@@ -1,9 +1,9 @@
-#include "kishimoto.h"
+#include "yourname.h"
 #include "state.h"
 
-using kishimoto::Bit;
+using yourname::Bit;
 
-int kishimoto::AI(state* field, state color) {
+int yourname::AI(state* field, state color) {
 	Bit now_mine = make_bit(field, color);
 	state o_color;
 	if (color == black) o_color = white;
@@ -34,7 +34,7 @@ int kishimoto::AI(state* field, state color) {
 	}
 	return put;
 }
-Bit kishimoto::make_bit(state* field, state color) {
+Bit yourname::make_bit(state* field, state color) {
 	Bit temp = 0ULL;
 	for (int i = 0; i < 64; i++) {
 		temp <<= 1;
@@ -43,7 +43,7 @@ Bit kishimoto::make_bit(state* field, state color) {
 	}
 	return temp;
 }
-Bit kishimoto::make_legal(Bit mine, Bit oppo) {
+Bit yourname::make_legal(Bit mine, Bit oppo) {
 	const Bit hor = oppo & 0x7e7e7e7e7e7e7e7eULL;
 	const Bit ver = oppo & 0x00ffffffffffff00ULL;
 	const Bit all = oppo & 0x007e7e7e7e7e7e00ULL;
@@ -116,7 +116,7 @@ Bit kishimoto::make_legal(Bit mine, Bit oppo) {
 
 	return lega;
 }
-Bit kishimoto::reverse(Bit posi, Bit mine, Bit oppo) {
+Bit yourname::reverse(Bit posi, Bit mine, Bit oppo) {
 	Bit reversed = 0ULL;
 	for (int k = 0; k < 8; k++) {
 		Bit temp_rev = 0ULL;
@@ -129,7 +129,7 @@ Bit kishimoto::reverse(Bit posi, Bit mine, Bit oppo) {
 	}
 	return reversed;
 }
-Bit kishimoto::transfer(Bit posi, int k) {
+Bit yourname::transfer(Bit posi, int k) {
 	switch (k) {
 		case 0:
 		return (posi << 1) & 0xfefefefefefefefeULL;
@@ -150,7 +150,7 @@ Bit kishimoto::transfer(Bit posi, int k) {
 		default: return posi;
 	}
 }
-int kishimoto::count(Bit x) {
+int yourname::count(Bit x) {
     x -= ((x >> 1) & 0x5555555555555555ULL);
     x = (x & 0x3333333333333333ULL) + ((x >> 2) & 0x3333333333333333ULL);
     x = (x + (x >> 4)) & 0x0f0f0f0f0f0f0f0fULL;
@@ -162,7 +162,7 @@ int kishimoto::count(Bit x) {
     return xi;
 }
 
-int kishimoto::eval(Bit mine, Bit oppo, int dep, int mode) {
+int yourname::eval(Bit mine, Bit oppo, int dep, int mode) {
 	int val;
 	int wa = 100;
 	int wb = -40;
@@ -239,7 +239,7 @@ int kishimoto::eval(Bit mine, Bit oppo, int dep, int mode) {
 	}
 	return val;
 }
-int kishimoto::nega_max(Bit mine, Bit oppo, int max, int turn_num, int dep) {
+int yourname::nega_max(Bit mine, Bit oppo, int max, int turn_num, int dep) {
 	int score = max;
 	int search_dep = 6;
 	if (turn_num < 5 || turn_num > 30) search_dep += 2;

@@ -1,7 +1,7 @@
 #pragma once
 enum state;
 
-namespace kishimoto{
+namespace yourname{
 	using Bit = unsigned long long;
 	int AI(state* field, state color);
 	Bit make_bit(state* field, state color);
