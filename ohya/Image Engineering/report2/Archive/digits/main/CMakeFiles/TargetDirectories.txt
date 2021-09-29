@@ -1,0 +1,3 @@
+/Users/jink/Desktop/Programme/Univ/Image Engineering/report2/digits/main/CMakeFiles/rebuild_cache.dir
+/Users/jink/Desktop/Programme/Univ/Image Engineering/report2/digits/main/CMakeFiles/edit_cache.dir
+/Users/jink/Desktop/Programme/Univ/Image Engineering/report2/digits/main/CMakeFiles/main.out.dir

@@ -1,0 +1,56 @@
+{
+	"folders": [
+		{
+			"name": "ohya-lab3",
+			"path": "."
+		}
+	],
+	"settings": {
+		"files.encoding": "shiftjis",
+		"files.associations": {
+			"source_location": "cpp",
+			"vector": "cpp",
+			"iosfwd": "cpp",
+			"iterator": "cpp"
+		},
+		"terminal.integrated.automationShell.osx": "conda activate ohya",
+		"terminal.integrated.defaultProfile.osx": "zsh",
+		"terminal.integrated.profiles.osx": {
+
+		
+			"zsh": {
+				"path": "zsh",
+				"args": [
+					"-l"
+				]
+			},
+			"bash": {
+				"path": "bash",
+				"args": [
+					"-l"
+				],
+				"icon": "terminal-bash"
+			},
+			"fish": {
+				"path": "fish",
+				"args": [
+					"-l"
+				]
+			},
+			"tmux": {
+				"path": "tmux",
+				"icon": "terminal-tmux"
+			},
+			"pwsh": {
+				"path": "pwsh",
+				"icon": "terminal-powershell"
+			}
+		},
+		"python.defaultInterpreterPath": "/opt/homebrew/Caskroom/mambaforge/base/envs/ohya/bin/python",
+		"C_Cpp.default.includePath": [
+			"/opt/homebrew/Cellar/gcc/11.2.0/include/c++/11.1.0",
+		],
+		"C_Cpp.default.compilerPath": "/opt/homebrew/bin/g++",
+		"jupyter.jupyterServerType": "local"
+	}
+}

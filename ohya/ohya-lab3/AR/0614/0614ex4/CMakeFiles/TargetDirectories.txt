@@ -1,0 +1,3 @@
+/Users/jink/Desktop/Programme/C++/ohya-lab3/0614/0614ex4/CMakeFiles/rebuild_cache.dir
+/Users/jink/Desktop/Programme/C++/ohya-lab3/0614/0614ex4/CMakeFiles/edit_cache.dir
+/Users/jink/Desktop/Programme/C++/ohya-lab3/0614/0614ex4/CMakeFiles/main.out.dir
