@@ -98,9 +98,13 @@ int main(void)
   {
     /* USER CODE END WHILE */
     uint32_t dly = 500;
-    uint32_t cnt = 0;
-    while (cnt < 10) {
-      HAL_GPIO_WritePin(*GPIOA, GPIO_11, GPIO_PIN_SET);
+    uint32_t cnt = 10;
+    for (int i = 0; i < cnt; i++) {
+      HAL_GPIO_WritePin(GPIOA, GPIO_PIN_5, GPIO_PIN_SET);
+      HAL_Delay(dly);
+      HAL_GPIO_WritePin(GPIOA, GPIO_PIN_5, GPIO_PIN_RESET);
+      HAL_Delay(dly);
+    }
     /* USER CODE BEGIN 3 */
   }
   /* USER CODE END 3 */
