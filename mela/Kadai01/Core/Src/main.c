@@ -97,7 +97,13 @@ int main(void)
   while (1)
   {
     /* USER CODE END WHILE */
-
+    for (int i = 0; i < 60; i++) {
+      uint32_t time = 1000 * i / 60;
+      HAL_GPIO_WritePin(GPIOA, GPIO_PIN_5, GPIO_PIN_SET);
+      HAL_Delay(time);
+      HAL_GPIO_WritePin(GPIOA, GPIO_PIN_5, GPIO_PIN_RESET);
+      HAL_Delay(1000 - time);
+    }
     /* USER CODE BEGIN 3 */
   }
   /* USER CODE END 3 */
