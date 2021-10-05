@@ -98,10 +98,10 @@ int main(void)
   {
     /* USER CODE END WHILE */
     uint32_t dly = 500;
-    uint32_t cnt = 10;
-    for (int i = 0; i < cnt; i++) {
+    uint32_t cnt = 9;
+    for (int i = 1; i < cnt; i++) {
       HAL_GPIO_WritePin(GPIOA, GPIO_PIN_5, GPIO_PIN_SET);
-      HAL_Delay(dly);
+      HAL_Delay(dly * i);
       HAL_GPIO_WritePin(GPIOA, GPIO_PIN_5, GPIO_PIN_RESET);
       HAL_Delay(dly);
     }
