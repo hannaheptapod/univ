@@ -1,0 +1,27 @@
+# ninja log v5
+3	527	6551018685497550	C:/Users/Jin/Programme/univ/mela/Kadai01/EWARM/Kadai01/Obj/Application/EWARM/startup_stm32f401xe.o	280a5ca363372542
+532	1281	6551018694197803	C:/Users/Jin/Programme/univ/mela/Kadai01/EWARM/Kadai01/Obj/Application/User/stm32f4xx_hal_msp.o	ca0bfffff8c960f1
+339	1323	6551018694327727	C:/Users/Jin/Programme/univ/mela/Kadai01/EWARM/Kadai01/Obj/Application/User/main.o	69c9a9d67c1419de
+1340	1747	6551018698840825	C:/Users/Jin/Programme/univ/mela/Kadai01/EWARM/Kadai01/Obj/Drivers/STM32F4xx_HAL_Driver/stm32f4xx_hal.o	2b26507fd5828068
+1296	1798	6551018699080659	C:/Users/Jin/Programme/univ/mela/Kadai01/EWARM/Kadai01/Obj/Drivers/STM32F4xx_HAL_Driver/stm32f4xx_hal_cortex.o	23697aca38b0dff0
+1764	2123	6551018702578891	C:/Users/Jin/Programme/univ/mela/Kadai01/EWARM/Kadai01/Obj/Drivers/CMSIS/system_stm32f4xx.o	14a61ae8cae6f908
+2141	2477	6551018706166814	C:/Users/Jin/Programme/univ/mela/Kadai01/EWARM/Kadai01/Obj/Application/User/stm32f4xx_it.o	c912d901e025d23f
+1817	2609	6551018707485884	C:/Users/Jin/Programme/univ/mela/Kadai01/EWARM/Kadai01/Obj/Drivers/STM32F4xx_HAL_Driver/stm32f4xx_hal_dma.o	7ec109423d258154
+2496	2896	6551018710374193	C:/Users/Jin/Programme/univ/mela/Kadai01/EWARM/Kadai01/Obj/Drivers/STM32F4xx_HAL_Driver/stm32f4xx_hal_tim.o	40b231af529a89d2
+2624	3293	6551018714281955	C:/Users/Jin/Programme/univ/mela/Kadai01/EWARM/Kadai01/Obj/Drivers/STM32F4xx_HAL_Driver/stm32f4xx_hal_flash.o	df1bfb8154d82f34
+2914	3787	6551018719189149	C:/Users/Jin/Programme/univ/mela/Kadai01/EWARM/Kadai01/Obj/Drivers/STM32F4xx_HAL_Driver/stm32f4xx_hal_dma_ex.o	a98c975a1fa8a6df
+3312	3835	6551018719478972	C:/Users/Jin/Programme/univ/mela/Kadai01/EWARM/Kadai01/Obj/Drivers/STM32F4xx_HAL_Driver/stm32f4xx_hal_exti.o	bbeb03036ee82f75
+3852	4220	6551018723616604	C:/Users/Jin/Programme/univ/mela/Kadai01/EWARM/Kadai01/Obj/Drivers/STM32F4xx_HAL_Driver/stm32f4xx_hal_flash_ramfunc.o	cbc20ef42bf7708
+3805	4625	6551018726195117	C:/Users/Jin/Programme/univ/mela/Kadai01/EWARM/Kadai01/Obj/Drivers/STM32F4xx_HAL_Driver/stm32f4xx_hal_flash_ex.o	84f50123291878cd
+4238	5259	6551018733960673	C:/Users/Jin/Programme/univ/mela/Kadai01/EWARM/Kadai01/Obj/Drivers/STM32F4xx_HAL_Driver/stm32f4xx_hal_rcc.o	58af0ff63be8bb1e
+4641	5367	6551018735050019	C:/Users/Jin/Programme/univ/mela/Kadai01/EWARM/Kadai01/Obj/Drivers/STM32F4xx_HAL_Driver/stm32f4xx_hal_gpio.o	cb9850b730dd90b3
+5386	5793	6551018739317796	C:/Users/Jin/Programme/univ/mela/Kadai01/EWARM/Kadai01/Obj/Drivers/STM32F4xx_HAL_Driver/stm32f4xx_hal_pwr_ex.o	827d813dad2c559
+5277	5881	6551018740217066	C:/Users/Jin/Programme/univ/mela/Kadai01/EWARM/Kadai01/Obj/Drivers/STM32F4xx_HAL_Driver/stm32f4xx_hal_rcc_ex.o	450686859afd3560
+5813	6269	6551018744075067	C:/Users/Jin/Programme/univ/mela/Kadai01/EWARM/Kadai01/Obj/Drivers/STM32F4xx_HAL_Driver/stm32f4xx_hal_pwr.o	a33f5326b86e318c
+6289	6598	6551018747392942	C:/Users/Jin/Programme/univ/mela/Kadai01/EWARM/Kadai01/Obj/Drivers/STM32F4xx_HAL_Driver/stm32f4xx_hal_tim_ex.o	7ebd0810f2800792
+5900	7467	6551018756068189	C:/Users/Jin/Programme/univ/mela/Kadai01/EWARM/Kadai01/Obj/Drivers/STM32F4xx_HAL_Driver/stm32f4xx_hal_uart.o	b66cd41f0d1108d6
+7486	8174	6551018763119808	C:/Users/Jin/Programme/univ/mela/Kadai01/EWARM/Kadai01/Exe/Kadai01.out	7efaf4c89052be90
+8214	8311	6551018764699028	C:/Users/Jin/Programme/univ/mela/Kadai01/EWARM/Kadai01/Exe/Kadai01.hex	d91014f554f4cadd
+7	339	6551020944784946	C:/Users/Jin/Programme/univ/mela/Kadai01/EWARM/Kadai01/Obj/Application/User/main.o	69c9a9d67c1419de
+353	488	6551020946329273	C:/Users/Jin/Programme/univ/mela/Kadai01/EWARM/Kadai01/Exe/Kadai01.out	7efaf4c89052be90
+530	544	6551020947028876	C:/Users/Jin/Programme/univ/mela/Kadai01/EWARM/Kadai01/Exe/Kadai01.hex	d91014f554f4cadd
