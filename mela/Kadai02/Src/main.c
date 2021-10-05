@@ -97,7 +97,9 @@ int main(void)
   while (1)
   {
     /* USER CODE END WHILE */
-
+    GPIO_PinState st = HAL_GPIO_ReadPin(GPIOC, GPIO_PIN_13);
+    if (st == 0) HAL_GPIO_WritePin(GPIOA, GPIO_PIN_5, GPIO_PIN_SET);
+    else HAL_GPIO_WritePin(GPIOA, GPIO_PIN_5, GPIO_PIN_RESET);
     /* USER CODE BEGIN 3 */
   }
   /* USER CODE END 3 */
