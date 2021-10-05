@@ -97,7 +97,10 @@ int main(void)
   while (1)
   {
     /* USER CODE END WHILE */
-
+    uint32_t dly = 500;
+    uint32_t cnt = 0;
+    while (cnt < 10) {
+      HAL_GPIO_WritePin(*GPIOA, GPIO_11, GPIO_PIN_SET);
     /* USER CODE BEGIN 3 */
   }
   /* USER CODE END 3 */
