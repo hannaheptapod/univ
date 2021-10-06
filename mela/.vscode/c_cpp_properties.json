@@ -1,35 +1,23 @@
 {
-    "configurations": [
-        {
-            "name": "STM32",
-            "includePath": [
-                "${workspaceFolder}/**",
-                "${workspaceFolder}/Kadai02/**",
-                "${workspaceFolder}/Kadai02/Inc/**",
-                "${workspaceFolder}/Kadai02/Drivers/STM32F4xx_HAL_Driver/Inc/**",
-                "${workspaceFolder}/Kadai02/Drivers/STM32F4xx_HAL_Driver/Inc/Legacy/**",
-                "${workspaceFolder}/Kadai02/Drivers/CMSIS/Include/**",
-                "${workspaceFolder}/Kadai02/Drivers/CMSIS/Device/ST/STM32F4xx/Include/**",
-                "${workspaceFolder}/Kadai01/**",
-                "${workspaceFolder}/Kadai01/Inc/**",
-                "${workspaceFolder}/Kadai01/Drivers/STM32F4xx_HAL_Driver/Inc/**",
-                "${workspaceFolder}/Kadai01/Drivers/STM32F4xx_HAL_Driver/Inc/Legacy/**",
-                "${workspaceFolder}/Kadai01/Drivers/CMSIS/Include/**",
-                "${workspaceFolder}/Kadai01/Drivers/CMSIS/Device/ST/STM32F4xx/Include/**",
-                "/opt/homebrew/Cellar/arm-none-eabi-gcc/10.3-2021.07/gcc/arm-none-eabi/include/**",
-                "/opt/homebrew/Cellar/arm-none-eabi-gcc/10.3-2021.07/gcc/lib/gcc/arm-none-eabi/10.3.1/include/**"
-            ],
-            "defines": [
-                "USE_HAL_DRIVER",
-                "STM32F401xE",
-                "__weak=__attribute__((weak))",
-                "__packed=__attribute__((__packed__))"
-            ],
-            "compilerPath": "/opt/homebrew/bin/arm-none-eabi-gcc",
-            "cStandard": "c11",
-            "cppStandard": "c++17",
-            "intelliSenseMode": "macos-clang-x64"
-        }
-    ],
-    "version": 4
+  "configurations": [
+    {
+      "name": "STM32",
+      "includePath": [
+        "${workspaceFolder}/**",
+        "/opt/homebrew/Cellar/arm-none-eabi-gcc/10.3-2021.07/gcc/arm-none-eabi/include/**",
+        "/opt/homebrew/Cellar/arm-none-eabi-gcc/10.3-2021.07/gcc/lib/gcc/arm-none-eabi/10.3.1/include/**"
+      ],
+      "defines": [
+        "STM32F401xE",
+        "USE_HAL_DRIVER",
+        "__packed=__attribute__((__packed__))",
+        "__weak=__attribute__((weak))"
+      ],
+      "compilerPath": "/opt/homebrew/bin/arm-none-eabi-gcc",
+      "cStandard": "c11",
+      "cppStandard": "c++17",
+      "intelliSenseMode": "clang-x64"
+    }
+  ],
+  "version": 4
 }
