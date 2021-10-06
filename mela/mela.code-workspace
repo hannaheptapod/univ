@@ -66,7 +66,8 @@
 		"C_Cpp.default.compilerPath": "/opt/homebrew/bin/g++",
 		"jupyter.jupyterServerType": "local",
 		"cortex-debug.armToolchainPath": "/opt/homebrew/bin",
-		"cortex-debug.openocdPath": "/opt/homebrew/bin/openocd"
+		"cortex-debug.openocdPath": "/opt/homebrew/bin/openocd",
+		"stm32-for-vscode.armToolchainPath": false
 	},
 	"launch": {
 		"configurations": [
