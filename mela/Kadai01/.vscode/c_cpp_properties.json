@@ -1,45 +1,43 @@
 {
     "configurations": [
         {
-            "name": "STM32",
+            "name": "Mac",
             "includePath": [
-                "/opt/homebrew/Cellar/arm-none-eabi-gcc/10.3-2021.07/gcc/arm-none-eabi/include/**",
-                "/opt/homebrew/Cellar/arm-none-eabi-gcc/10.3-2021.07/gcc/lib/gcc/arm-none-eabi/10.3.1/include/**",
-                "/opt/homebrew/Cellar/arm-none-eabi-gcc/10.3-2021.07/gcc/lib/gcc/arm-none-eabi/10.3.1/include-fixed/**",
                 "${workspaceFolder}/**",
-                "${workspaceFolder}/Core/Src/**",
                 "${workspaceFolder}/Core/Inc/**",
                 "${workspaceFolder}/Drivers/STM32F4xx_HAL_Driver/Inc/**",
-                "${workspaceFolder}/Drivers/CMSIS/Include/**",
                 "${workspaceFolder}/Drivers/STM32F4xx_HAL_Driver/Inc/Legacy/**",
                 "${workspaceFolder}/Drivers/CMSIS/Device/ST/STM32F4xx/Include/**",
-                "${workspaceFolder}/Drivers/CMSIS/Core/Include/**"
+                "${workspaceFolder}/Drivers/CMSIS/Include/**"
             ],
-            "browse": {
-                "path": [
-                    "${workspaceFolder}/**",
-                    "${workspaceFolder}/Core/Src/**",
-                    "${workspaceFolder}/Core/Inc/**",
-                    "${workspaceFolder}/Drivers/CMSIS/Include/**",
-                    "${workspaceFolder}/Drivers/CMSIS/Core/Include/**",
-                    "${workspaceFolder}/Drivers/CMSIS/Device/ST/STM32F4xx/Include/**",
-                    "${workspaceFolder}/Drivers/STM32F4xx_HAL_Driver/Inc/**",
-                    "${workspaceFolder}/Drivers/STM32F4xx_HAL_Driver/Inc/Legacy/**",
-                    "${workspaceFolder}/Drivers/STM32F4xx_HAL_Driver/Src/**"
-                ],
-                "limitSymbolsToIncludedHeaders": true,
-                "databaseFilename": ""
-            },
-            "defines": [
-                "USE_HAL_DRIVER",
-                "USE_DEVICE_MODE",
-                "STM32F401xE",
-                "__weak=__attribute__((weak))"
+            "intelliSenseMode": "clang-x64",
+            "forcedInclude": [
+                "Core/Src/main.c",
+                "Core/Src/stm32f4xx_it.c",
+                "Core/Src/stm32f4xx_hal_msp.c",
+                "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.c",
+                "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c",
+                "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.c",
+                "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c",
+                "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c",
+                "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.c",
+                "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ex.c",
+                "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c",
+                "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c",
+                "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c",
+                "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.c",
+                "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.c",
+                "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.c",
+                "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.c",
+                "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c ",
+                "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_exti.c",
+                "Core/Src/system_stm32f4xx.c"
             ],
             "compilerPath": "/opt/homebrew/bin/arm-none-eabi-gcc",
-            "cStandard": "c11",
-            "cppStandard": "c++17",
-            "intelliSenseMode": "clang-x64"
+            "defines": [
+                "USE_HAL_DRIVER",
+                "STM32F401xE"
+            ]
         }
     ],
     "version": 4
