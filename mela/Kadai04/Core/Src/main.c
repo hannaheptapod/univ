@@ -92,6 +92,10 @@ int main(void)
   MX_TIM2_Init();
   MX_USART2_UART_Init();
   /* USER CODE BEGIN 2 */
+    HAL_TIM_Base_Start_IT(&htim2);
+    void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim) {
+      if (htim == &htim2) HAL_GPIO_TogglePin(GPIOA, GPIO_PIN_5);
+    }
   /* USER CODE END 2 */
 
   /* Infinite loop */
@@ -158,10 +162,6 @@ static void MX_TIM2_Init(void)
 {
 
   /* USER CODE BEGIN TIM2_Init 0 */
-    HAL_TIM_Base_Start_IT(&htim2);
-    void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim) {
-      if (htim == &htim2) HAL_GPIO_TogglePin(GPIOA, GPIO_PIN_5);
-    }
   /* USER CODE END TIM2_Init 0 */
 
   TIM_ClockConfigTypeDef sClockSourceConfig = {0};
