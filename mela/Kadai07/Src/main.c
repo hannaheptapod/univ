@@ -58,9 +58,8 @@ static void MX_USART2_UART_Init(void);
 
 /* Private user code ---------------------------------------------------------*/
 /* USER CODE BEGIN 0 */
-uint16_t period, pulse_duration;
-period = 0;
-pulse_duration = 0;
+uint16_t period = 0;
+uint16_t pulse_duration = 0;
 void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim) {
   if (htim == &htim2) {
     HAL_GPIO_WritePin(GPIOA, GPIO_PIN_5, GPIO_PIN_SET);
