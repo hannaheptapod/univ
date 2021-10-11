@@ -97,7 +97,13 @@ int main(void)
   while (1)
   {
     /* USER CODE END WHILE */
-
+    uint16_t on, off;
+    on = 750;
+    off = 250;
+    HAL_GPIO_WritePin(GPIOA, GPIO_PIN_5, GPIO_PIN_SET);
+    HAL_Delay(on);
+    HAL_GPIO_WritePin(GPIOA, GPIO_PIN_5, GPIO_PIN_RESET);
+    HAL_Delay(off);
     /* USER CODE BEGIN 3 */
   }
   /* USER CODE END 3 */

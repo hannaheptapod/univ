@@ -16,8 +16,6 @@
             ],
             "compilerPath": "/opt/homebrew/bin/arm-none-eabi-gcc",
             "defines": [
-                "USE_HAL_DRIVER",
-                "STM32F401xE"
             ]
         }
     ],
