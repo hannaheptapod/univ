@@ -97,10 +97,8 @@ int main(void)
   /* USER CODE BEGIN 2 */
     HAL_TIM_Base_Start_IT(&htim2);
     __weak void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim) {
-      if (htim == &htim2) {
-        HAL_GPIO_TogglePin(GPIOA, GPIO_PIN_5);
-      }
-    }
+      if (htim == &htim2) HAL_GPIO_TogglePin(GPIOA, GPIO_PIN_5);
+    };
   /* USER CODE END 2 */
 
   /* Infinite loop */
