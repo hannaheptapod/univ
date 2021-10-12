@@ -69,7 +69,6 @@ void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim) {
       time = 0;
       pulse_duration++;
     }
-
   }
   
 }
