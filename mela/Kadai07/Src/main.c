@@ -63,6 +63,8 @@ uint16_t pulse_duration = 0;
 void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim) {
   if (htim == &htim2) {
     pulse_duration++;
+    if (pulse_duration >= 500) HAL_GPIO_WritePin(GPIOA, GPIO_PIN_5, GPIO_PIN_SET);
+    else HAL_GPIO_WritePin(GPIOA, GPIO_PIN_5, GPIO_PIN_RESET);
   }
 }
 /* USER CODE END 0 */
