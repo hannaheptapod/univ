@@ -64,9 +64,11 @@ static void MX_TIM2_Init(void);
 /* USER CODE BEGIN 0 */
 __IO uint16_t ConvertedValue;
 void HAL_ADC_ConvCpltCallback(ADC_HandleTypeDef *hadc) {
-  ConvertedValue = HAL_ADC_GetValue(hadc) * 10;
-  htim2.Instance -> CCR1 = ConvertedValue;
-  HAL_Delay(100);
+  if (HAL_ADC_GetState(hadc) & HAL_ADC_STATE_EOC_REG) {
+    ConvertedValue = HAL_ADC_GetValue(hadc) * 10;
+    htim2.Instance -> CCR1 = ConvertedValue;
+    HAL_Delay(100);
+  }
 }
 /* USER CODE END 0 */
 
