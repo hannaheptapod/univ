@@ -106,7 +106,7 @@ int main(void)
   {
     pulse_duration++;
     ConfigOC.Pulse = pulse_duration;
-    htim2.Instance->CCR1 = pulse_duraion;
+    htim2.Instance->CCR1 = pulse_duration;
     HAL_Delay(100);
     /* USER CODE END WHILE */
     /* USER CODE BEGIN 3 */
