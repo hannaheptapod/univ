@@ -64,7 +64,7 @@ static void MX_TIM2_Init(void);
 /* USER CODE BEGIN 0 */
 __IO uint16_t ConvertedValue;
 void HAL_ADC_ConvCpltCallback(ADC_HandleTypeDef *hadc) {
-  ConvertedValue = HAL_ADC_GetValue(hadc) * 10;
+  ConvertedValue = 100;
   htim2.Instance -> CCR1 = ConvertedValue;
 }
 /* USER CODE END 0 */
