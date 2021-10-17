@@ -111,7 +111,7 @@ int main(void)
     HAL_ADC_Start(&hadc1);
     HAL_ADC_PollForConversion(&hadc1, 10);
     if (HAL_ADC_GetState(&hadc1) & HAL_ADC_STATE_EOC_REG) {
-      ad = HAL_ADC_GetValue(&hadc1) * 10;
+      uint32_t ad = HAL_ADC_GetValue(&hadc1) * 10;
       htim2.Instance -> CCR1 = 3.3*ad / 4095;
       HAL_Delay(100);
     }
