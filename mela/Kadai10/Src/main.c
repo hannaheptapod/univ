@@ -63,7 +63,7 @@ static void MX_TIM2_Init(void);
 /* Private user code ---------------------------------------------------------*/
 /* USER CODE BEGIN 0 */
 uint32_t ADC_ConvertedValue;
-void HAL_ADC_ConvCpltCallback(ADC_HandleTypeDef* hadc) {
+void HAL_ADC_ConvCpltCallback(ADC_HandleTypeDef *hadc) {
   ADC_ConvertedValue = HAL_ADC_GetValue(hadc);
   htim2.Instance -> CCR1 = ADC_ConvertedValue * 10;
   HAL_Delay(100);
