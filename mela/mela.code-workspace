@@ -5,32 +5,8 @@
 			"path": "."
 		},
 		{
-			"name": "Kadai01",
-			"path": "./Kadai01"
-		},
-		{
-			"name": "Kadai02",
-			"path": "./Kadai02"
-		},
-		{
-			"name": "Kadai03",
-			"path": "./Kadai03"
-		},
-		{
-			"name": "Kadai04",
-			"path": "./Kadai04"
-		},
-		{
-			"name": "Kadai05",
-			"path": "Kadai05"
-		},
-		{
-			"name": "Kadai07",
-			"path": "Kadai07"
-		},
-		{
-			"name": "Kadai08",
-			"path": "Kadai08"
+			"name": "Kadai09",
+			"path": "./Kadai09"
 		},
 		{
 			"path": "../../../Library/CloudStorage/Box-Box/Box/21F/21F.MEL-A"

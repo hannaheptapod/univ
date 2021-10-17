@@ -1,0 +1,23 @@
+{
+    "configurations": [
+        {
+            "name": "STM32",
+            "includePath": [
+                "${workspaceFolder}/**",
+                "${workspaceFolder}/Inc/**",
+                "${workspaceFolder}/Src/**",
+                "${workspaceFolder}/Drivers/STM32F4xx_HAL_Driver/Inc/**",
+                "${workspaceFolder}/Drivers/STM32F4xx_HAL_Driver/Inc/Legacy/**",
+                "${workspaceFolder}/Drivers/CMSIS/Device/ST/STM32F4xx/Include/**",
+                "${workspaceFolder}/Drivers/CMSIS/Include/**"
+            ],
+            "intelliSenseMode": "clang-x64",
+            "compilerPath": "/opt/homebrew/bin/arm-none-eabi-gcc",
+            "defines": [
+                "USE_HAL_DRIVER",
+                "STM32F401xE"
+            ]
+        }
+    ],
+    "version": 4
+}
