@@ -62,7 +62,10 @@ static void MX_TIM2_Init(void);
 
 /* Private user code ---------------------------------------------------------*/
 /* USER CODE BEGIN 0 */
-
+void HAL_ADC_ConvCpltCallback(ADC_HandleTypeDef *hadc1) {
+  htim2.Instance -> CCR1 = HAL_ADC_GetValue(&hadc1) * 10;
+  HAL_Delay(100);
+}
 /* USER CODE END 0 */
 
 /**
@@ -101,10 +104,6 @@ int main(void)
   ConfigOC.OCMode = TIM_OCMODE_PWM1;
   ConfigOC.OCPolarity = TIM_OCPOLARITY_HIGH;
   ConfigOC.OCFastMode = TIM_OCFAST_DISABLE;
-  void HAL_ADC_ConvCpltCallback(ADC_HandleTypeDef *hadc1) {
-    htim2.Instance -> CCR1 = hadc1 * 10;
-    HAL_Delay(100);
-  }
   /* USER CODE END 2 */
 
   /* Infinite loop */
