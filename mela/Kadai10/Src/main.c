@@ -62,7 +62,7 @@ static void MX_TIM2_Init(void);
 
 /* Private user code ---------------------------------------------------------*/
 /* USER CODE BEGIN 0 */
-void HAL_ADC_ConvCpltCallback(ADC_HandleTypeDef *hadc) {
+void HAL_ADC_ConvCpltCallback(ADC_HandleTypeDef* hadc) {
   if (HAL_ADC_GetState(hadc) & HAL_ADC_STATE_EOC_REG) {
     htim2.Instance -> CCR1 = HAL_ADC_GetValue(hadc) * 10;
     HAL_Delay(100);
