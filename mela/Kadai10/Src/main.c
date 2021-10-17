@@ -111,7 +111,7 @@ int main(void)
   {
     HAL_ADC_Start(&hadc1);
     HAL_Delay(100);
-    HAL_ADC_Stop(hadc);
+    HAL_ADC_Stop(&hadc1);
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
