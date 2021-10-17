@@ -64,7 +64,7 @@ static void MX_TIM2_Init(void);
 /* USER CODE BEGIN 0 */
 __IO uint16_t ConvertedValue;
 void HAL_ADC_ConvCpltCallback(ADC_HandleTypeDef *hadc) {
-  ConvertedValue = 100;
+  ConvertedValue = HAL_ADC_GetValue(hadc) * 10;
   htim2.Instance -> CCR1 = ConvertedValue;
 }
 /* USER CODE END 0 */
@@ -105,6 +105,7 @@ int main(void)
   ConfigOC.OCMode = TIM_OCMODE_PWM1;
   ConfigOC.OCPolarity = TIM_OCPOLARITY_HIGH;
   ConfigOC.OCFastMode = TIM_OCFAST_DISABLE;
+  HAL_TIM_PWM_Start(&htim2, TIM_CHANNEL_1);
   /* USER CODE END 2 */
 
   /* Infinite loop */
