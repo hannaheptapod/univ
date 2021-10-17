@@ -62,8 +62,10 @@ static void MX_TIM2_Init(void);
 
 /* Private user code ---------------------------------------------------------*/
 /* USER CODE BEGIN 0 */
+uint32_t ADC_ConvertedValue;
 void HAL_ADC_ConvCpltCallback(ADC_HandleTypeDef* hadc) {
-  htim2.Instance -> CCR1 = HAL_ADC_GetValue(&hadc) * 10;
+  ADC_ConvertedValue = HAL_ADC_GetValue(hadc);
+  htim2.Instance -> CCR1 = ADC_ConvertedValue * 10;
   HAL_Delay(100);
 }
 /* USER CODE END 0 */
@@ -112,7 +114,6 @@ int main(void)
   {
     HAL_ADC_Start(&hadc1);
     HAL_ADC_PollForConversion(&hadc1, 10);
-
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
