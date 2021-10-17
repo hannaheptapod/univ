@@ -106,8 +106,7 @@ int main(void)
   {
     pulse_duration++;
     ConfigOC.Pulse = pulse_duration;
-    HAL_TIM_PWM_ConfigChannel(&htim2, &ConfigOC, TIM_CHANNEL_1);
-    HAL_TIM_PWM_Start(&htim2, TIM_CHANNEL_1);
+    htim2.Instance->CCR1 = pulse_duraion;
     HAL_Delay(100);
     /* USER CODE END WHILE */
     /* USER CODE BEGIN 3 */
