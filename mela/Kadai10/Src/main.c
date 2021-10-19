@@ -67,6 +67,7 @@ void HAL_ADC_ConvCpltCallback(ADC_HandleTypeDef* hadc) {
     htim2.Instance -> CCR1 = HAL_ADC_GetValue(hadc) * 10;
     HAL_Delay(100);
   }
+  HAL_ADC_Stop(&hadc1);
 }
 /* USER CODE END 0 */
 
@@ -115,7 +116,6 @@ int main(void)
   {
     HAL_ADC_Start(&hadc1);
     HAL_ADC_PollForConversion(&hadc1, 10);
-    HAL_ADC_Stop(&hadc1);
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
