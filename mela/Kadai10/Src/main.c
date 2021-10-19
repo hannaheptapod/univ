@@ -62,9 +62,9 @@ static void MX_TIM2_Init(void);
 
 /* Private user code ---------------------------------------------------------*/
 /* USER CODE BEGIN 0 */
-uint16_t adc;
+uint16_t adc = 0;
 void HAL_ADC_ConvCpltCallback(ADC_HandleTypeDef* hadc) {
-  adc = HAL_ADC_GetValue(hadc);
+  adc = 1;
   htim2.Instance -> CCR1 = adc * 10;
   HAL_Delay(100);
   HAL_ADC_Stop(hadc);
