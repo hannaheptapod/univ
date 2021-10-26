@@ -102,7 +102,7 @@ int main(void)
   double epsilon_sum = 0;
   double Kp = 20.0;
   double Ti = 200.0;
-  double Td = 0;
+  double Td = 0.1;
   double target = 0;
   double current = 0;
   double out = 0;
@@ -136,9 +136,10 @@ int main(void)
     HAL_ADC_PollForConversion(&hadc1, 10);
     if(HAL_ADC_GetState(&hadc1) & HAL_ADC_STATE_EOC_REG) current = HAL_ADC_GetValue(&hadc1);
     HAL_ADC_Stop(&hadc1);
+    epsilon_sum += epsilon;
     old_epsilon = epsilon;
     epsilon = target - current;
-    out = Kp * epsilon + Td * (epsilon - old_epsilon);
+    out = Kp*epsilon + (1/Ti)*epsilon_sum + Td*(epsilon - old_epsilon);
 
     HAL_GPIO_WritePin(GPIOC, GPIO_PIN_7, GPIO_PIN_SET);
     if(out < 0) {
