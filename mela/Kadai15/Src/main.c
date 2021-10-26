@@ -136,8 +136,9 @@ int main(void)
     HAL_ADC_PollForConversion(&hadc1, 10);
     if(HAL_ADC_GetState(&hadc1) & HAL_ADC_STATE_EOC_REG) current = HAL_ADC_GetValue(&hadc1);
     HAL_ADC_Stop(&hadc1);
+    old_epsilon = epsilon;
     epsilon = target - current;
-    out = Kp * epsilon;
+    out = Kp * epsilon + Td * (epsilon - old_epsilon);
 
     HAL_GPIO_WritePin(GPIOC, GPIO_PIN_7, GPIO_PIN_SET);
     if(out < 0) {
