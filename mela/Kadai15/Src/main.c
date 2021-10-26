@@ -97,6 +97,7 @@ int main(void)
   MX_USART2_UART_Init();
   MX_TIM2_Init();
   /* USER CODE BEGIN 2 */
+  uint16_t a = 1;
   double epsilon = 0;
   double old_epsilon = 0;
   double epsilon_sum = 0;
