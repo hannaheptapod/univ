@@ -50,6 +50,12 @@
 			"/opt/homebrew/Cellar/gcc/11.2.0/include/c++/11.1.0",
 		],
 		"C_Cpp.default.compilerPath": "/opt/homebrew/bin/g++",
-		"jupyter.jupyterServerType": "local"
+		"jupyter.jupyterServerType": "local",
+		"editor.fontSize": 14,
+		"scm.inputFontSize": 14,
+		"debug.console.fontSize": 14,
+		"terminal.integrated.fontSize": 14,
+		"printcode.fontSize": 14,
+		"editor.acceptSuggestionOnEnter": "smart"
 	}
 }
