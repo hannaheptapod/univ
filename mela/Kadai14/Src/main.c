@@ -117,6 +117,7 @@ int main(void)
       HAL_Delay(100);
     }
     HAL_ADC_Stop(&hadc1);
+    HAL_GPIO_WritePin(GPIOA, GPIO_PIN_7, GPIO_PIN_RESET);
 
     /* USER CODE END WHILE */
 
