@@ -114,9 +114,10 @@ int main(void)
       htim3.Instance -> CCR2 = HAL_ADC_GetValue(&hadc1)*10;
       HAL_GPIO_WritePin(GPIOA, GPIO_PIN_7, GPIO_PIN_SET);
       HAL_GPIO_WritePin(GPIOB, GPIO_PIN_6, GPIO_PIN_RESET);
+      HAL_Delay(100);
     }
     HAL_ADC_Stop(&hadc1);
-    
+
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
