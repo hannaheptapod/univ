@@ -109,7 +109,7 @@ int main(void)
   while (1)
   {
     HAL_ADC_Start(&hadc1);
-    HAL_ADC_PollForConversion(&hadc1, 10);
+    HAL_ADC_PollForConversion(&hadc1, 1000);
     if (HAL_ADC_GetState(&hadc1) & HAL_ADC_STATE_EOC_REG) {
       htim3.Instance -> CCR2 = HAL_ADC_GetValue(&hadc1);
       HAL_GPIO_WritePin(GPIOA, GPIO_PIN_7, GPIO_PIN_SET);
