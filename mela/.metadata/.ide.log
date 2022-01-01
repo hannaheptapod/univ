@@ -1463,3 +1463,25 @@
 
 2021-11-09 09:05:15,908 [INFO] Activator:178 - !SESSION log4j initialized
 2021-11-09 09:05:24,472 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] 
+2021-12-02 09:07:24,682 [INFO] Activator:177 - 
+
+
+2021-12-02 09:07:24,684 [INFO] Activator:178 - !SESSION log4j initialized
+2021-12-02 09:07:29,598 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] 
+2021-12-20 23:27:05,914 [INFO] Activator:177 - 
+
+
+2021-12-20 23:27:05,918 [INFO] Activator:178 - !SESSION log4j initialized
+2021-12-20 23:27:14,698 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] 
+2021-12-20 23:29:13,204 [ERROR] ApiDbMcu:1508 - Can't use Application install path:
+2021-12-20 23:29:13,212 [WARN] RulesReader:59 - Compatibility file://mcu/compatibility.xml not found
+2021-12-20 23:33:07,407 [INFO] Activator:177 - 
+
+
+2021-12-20 23:33:07,409 [INFO] Activator:178 - !SESSION log4j initialized
+2021-12-20 23:33:12,623 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] 
+2021-12-20 23:38:37,667 [INFO] Activator:177 - 
+
+
+2021-12-20 23:38:37,669 [INFO] Activator:178 - !SESSION log4j initialized
+2021-12-20 23:38:42,722 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] 

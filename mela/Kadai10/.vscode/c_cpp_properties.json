@@ -10,7 +10,12 @@
                 "${workspaceFolder}/Drivers/CMSIS/Device/ST/STM32F4xx/Include/**",
                 "${workspaceFolder}/Drivers/CMSIS/Include/**",
                 "/opt/homebrew/Cellar/arm-none-eabi-gcc/10.3-2021.07/gcc/arm-none-eabi/include/**",
-                "/opt/homebrew/Cellar/arm-none-eabi-gcc/10.3-2021.07/gcc/lib/gcc/arm-none-eabi/10.3.1/include/**"
+                "/opt/homebrew/Cellar/arm-none-eabi-gcc/10.3-2021.07/gcc/lib/gcc/arm-none-eabi/10.3.1/include/**",
+                "${workspaceFolder}/**"
+            ],
+            "defines": [
+                "USE_HAL_DRIVER",
+                "STM32F401xE"
             ],
             "intelliSenseMode": "clang-x64",
             "browse": {
@@ -22,14 +27,13 @@
                     "${workspaceFolder}/Drivers/CMSIS/Device/ST/STM32F4xx/Include/**",
                     "${workspaceFolder}/Drivers/CMSIS/Include/**",
                     "/opt/homebrew/Cellar/arm-none-eabi-gcc/10.3-2021.07/gcc/arm-none-eabi/include/**",
-                    "/opt/homebrew/Cellar/arm-none-eabi-gcc/10.3-2021.07/gcc/lib/gcc/arm-none-eabi/10.3.1/include/**"
-                ]
+                    "/opt/homebrew/Cellar/arm-none-eabi-gcc/10.3-2021.07/gcc/lib/gcc/arm-none-eabi/10.3.1/include/**",
+                    "${workspaceFolder}/**"
+                ],
+                "limitSymbolsToIncludedHeaders": true,
+                "databaseFilename": ""
             },
-            "compilerPath": "/opt/homebrew/bin/arm-none-eabi-gcc",
-            "defines": [
-                "USE_HAL_DRIVER",
-                "STM32F401_E"
-            ]
+            "compilerPath": "/opt/homebrew/bin/arm-none-eabi-gcc"
         }
     ],
     "version": 4
