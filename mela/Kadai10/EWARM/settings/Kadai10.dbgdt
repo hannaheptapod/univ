@@ -232,7 +232,7 @@
             <IarPane-34101>
                 <expressions>
                     <item>adc</item>
-                    <item></item>
+                    <item />
                 </expressions>
                 <col-names>
                     <item>位置</item>
