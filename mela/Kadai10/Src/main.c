@@ -59,6 +59,12 @@ static void MX_ADC1_Init(void);
 
 /* Private user code ---------------------------------------------------------*/
 /* USER CODE BEGIN 0 */
+  TIM_OC_InitTypeDef ConfigOC;
+  ConfigOC.OCMode = TIM_OCMODE_PWM1;
+  ConfigOC.OCPolarity = TIM_OCPOLARITY_HIGH;
+  ConfigOC.OCFastMode = TIM_OCFAST_DISABLE;
+  HAL_TIM_PWM_Start(&htim2, TIM_CHANNEL_1);
+  
 void HAL_ADC_ConvCpltCallback(uint16_t i) {
   HAL_ADC_Start(&hadc1);
   HAL_ADC_PollForConversion(&hadc1, 10);
@@ -101,11 +107,6 @@ int main(void)
   MX_USART2_UART_Init();
   MX_ADC1_Init();
   /* USER CODE BEGIN 2 */
-  TIM_OC_InitTypeDef ConfigOC;
-  ConfigOC.OCMode = TIM_OCMODE_PWM1;
-  ConfigOC.OCPolarity = TIM_OCPOLARITY_HIGH;
-  ConfigOC.OCFastMode = TIM_OCFAST_DISABLE;
-  HAL_TIM_PWM_Start(&htim2, TIM_CHANNEL_1);
   /* USER CODE END 2 */
 
   /* Infinite loop */
