@@ -59,7 +59,15 @@ static void MX_ADC1_Init(void);
 
 /* Private user code ---------------------------------------------------------*/
 /* USER CODE BEGIN 0 */
-
+void HAL_ADC_ConvCpltCallback(uint16_t i) {
+  HAL_ADC_Start(&hadc1);
+  HAL_ADC_PollForConversion(&hadc1, 10);
+  if (HAL_ADC_GetState(&hadc1) & HAL_ADC_STATE_EOC_REG) {
+    htim2.Instance -> CCR1 = HAL_ADC_GetValue(&hadc1)*10;
+    HAL_Delay(100);
+  }
+  HAL_ADC_Stop(&hadc1);
+}
 /* USER CODE END 0 */
 
 /**
@@ -104,11 +112,7 @@ int main(void)
   /* USER CODE BEGIN WHILE */
   while (1)
   {
-    HAL_ADC_Start(&hadc1);
-    HAL_ADC_PollForConversion(&hadc1, 10);
-    if (HAL_ADC_GetState(&hadc1) & HAL_ADC_STATE_EOC_REG) {
-      
-    }
+
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
