@@ -46,6 +46,8 @@ TIM_HandleTypeDef htim2;
 
 UART_HandleTypeDef huart2;
 
+uint16_t volte = 0;
+
 /* USER CODE BEGIN PV */
 
 /* USER CODE END PV */
@@ -65,6 +67,7 @@ void HAL_ADC_ConvCpltCallback(ADC_HandleTypeDef* hadc);
 /* USER CODE BEGIN 0 */
 
 void HAL_ADC_ConvCpltCallback(ADC_HandleTypeDef* hadc) {
+  htim2.Instance -> CCR1 = volte;
 }
 /* USER CODE END 0 */
 
@@ -114,7 +117,7 @@ int main(void)
     HAL_ADC_Start(&hadc1);
     HAL_ADC_PollForConversion(&hadc1, 10);
     if (HAL_ADC_GetState(&hadc1) & HAL_ADC_STATE_EOC_REG) {
-      htim2.Instance -> CCR1 = HAL_ADC_GetValue(&hadc1)*10;
+      volte = HAL_ADC_GetValue(&hadc1)*10;
     }
     HAL_ADC_Stop(&hadc1);
     /* USER CODE END WHILE */
