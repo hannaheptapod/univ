@@ -1,8 +1,8 @@
 from PIL import Image
 import os
 
-src_dir = './datas/wine/'
-dst_dir = './dataset/wine/'
+src_dir = './val/wine/'
+dst_dir = './val/wine/'
 
 ls = os.listdir(src_dir)
 
