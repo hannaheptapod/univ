@@ -70,8 +70,9 @@ void HAL_ADC_ConvCpltCallback(ADC_HandleTypeDef* hadc) {
   HAL_ADC_PollForConversion(&hadc1, 10);
   if (HAL_ADC_GetState(&hadc1) & HAL_ADC_STATE_EOC_REG) {
     ADC_ConvertedValue = HAL_ADC_GetValue(hadc);
-    htim2.Instance -> CCR1 = ADC_ConvertedValue*10/3300;
+    htim2.Instance -> CCR1 = ADC_ConvertedValue*10;
   }
+  HAL_Delay(5);
   HAL_ADC_Stop(&hadc1);
 }
 /* USER CODE END 0 */
