@@ -67,7 +67,12 @@ void HAL_ADC_ConvCpltCallback(ADC_HandleTypeDef* hadc);
 /* USER CODE BEGIN 0 */
 
 void HAL_ADC_ConvCpltCallback(ADC_HandleTypeDef* hadc) {
-  ADC_ConvertedValue = HAL_ADC_GetValue(hadc);
+  HAL_ADC_PollForConversion(&hadc1, 10);
+  if (HAL_ADC_GetState(&hadc1) & HAL_ADC_STATE_EOC_REG) {
+    ADC_ConvertedValue = HAL_ADC_GetValue(hadc);
+    htim2.Instance -> CCR1 = ADC_ConvertedValue*10/3300;
+  }
+  HAL_ADC_Stop(&hadc1);
 }
 /* USER CODE END 0 */
 
@@ -116,11 +121,6 @@ int main(void)
   while (1)
   {
     HAL_ADC_Start(&hadc1);
-    HAL_ADC_PollForConversion(&hadc1, 10);
-    if (HAL_ADC_GetState(&hadc1) & HAL_ADC_STATE_EOC_REG) {
-      
-    }
-    HAL_ADC_Stop(&hadc1);
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
