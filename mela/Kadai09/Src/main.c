@@ -62,7 +62,9 @@ static void MX_USART2_UART_Init(void);
 
 /* Private user code ---------------------------------------------------------*/
 /* USER CODE BEGIN 0 */
-
+void HAL_ADC_ConvCpltCallback(ADC_HandleTypeDef* hadc){
+  HAL_Delay(1);
+}
 /* USER CODE END 0 */
 
 /**

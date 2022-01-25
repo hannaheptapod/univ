@@ -46,7 +46,7 @@ TIM_HandleTypeDef htim2;
 
 UART_HandleTypeDef huart2;
 
-uint16_t volte = 0;
+__IO uint16_t ADC_ConvertedValue = 0;
 
 /* USER CODE BEGIN PV */
 
@@ -67,7 +67,7 @@ void HAL_ADC_ConvCpltCallback(ADC_HandleTypeDef* hadc);
 /* USER CODE BEGIN 0 */
 
 void HAL_ADC_ConvCpltCallback(ADC_HandleTypeDef* hadc) {
-  htim2.Instance -> CCR1 = volte;
+  ADC_ConvertedValue = HAL_ADC_GetValue(hadc);
 }
 /* USER CODE END 0 */
 
@@ -108,6 +108,7 @@ int main(void)
   ConfigOC.OCPolarity = TIM_OCPOLARITY_HIGH;
   ConfigOC.OCFastMode = TIM_OCFAST_DISABLE;
   HAL_TIM_PWM_Start(&htim2, TIM_CHANNEL_1);
+  HAL_ADC_Start_IT(&hadc1);
   /* USER CODE END 2 */
 
   /* Infinite loop */
@@ -117,7 +118,7 @@ int main(void)
     HAL_ADC_Start(&hadc1);
     HAL_ADC_PollForConversion(&hadc1, 10);
     if (HAL_ADC_GetState(&hadc1) & HAL_ADC_STATE_EOC_REG) {
-      volte = HAL_ADC_GetValue(&hadc1)*10;
+      
     }
     HAL_ADC_Stop(&hadc1);
     /* USER CODE END WHILE */
