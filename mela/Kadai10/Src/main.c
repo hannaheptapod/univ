@@ -46,8 +46,6 @@ TIM_HandleTypeDef htim2;
 
 UART_HandleTypeDef huart2;
 
-__IO uint16_t ADC_ConvertedValue = 0;
-
 /* USER CODE BEGIN PV */
 
 /* USER CODE END PV */
@@ -69,11 +67,8 @@ void HAL_ADC_ConvCpltCallback(ADC_HandleTypeDef* hadc);
 void HAL_ADC_ConvCpltCallback(ADC_HandleTypeDef* hadc) {
   HAL_ADC_PollForConversion(&hadc1, 10);
   if (HAL_ADC_GetState(&hadc1) & HAL_ADC_STATE_EOC_REG) {
-    ADC_ConvertedValue = HAL_ADC_GetValue(hadc);
-    htim2.Instance -> CCR1 = ADC_ConvertedValue*10;
+    htim2.Instance -> CCR1 = HAL_ADC_GetValue(hadc)*10;
   }
-  HAL_Delay(5);
-  HAL_ADC_Stop(&hadc1);
 }
 /* USER CODE END 0 */
 
@@ -122,6 +117,8 @@ int main(void)
   while (1)
   {
     HAL_ADC_Start(&hadc1);
+    HAL_Delay(5);
+    HAL_ADC_Stop(&hadc1);
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
