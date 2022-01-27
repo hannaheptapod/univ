@@ -45,7 +45,7 @@ ADC_HandleTypeDef hadc1;
 UART_HandleTypeDef huart2;
 
 /* USER CODE BEGIN PV */
-
+float voltage = 0.0;
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -101,7 +101,11 @@ int main(void)
   while (1)
   {
     /* USER CODE END WHILE */
-
+    HAL_ADC_Start(&hadc1);
+    HAL_ADC_PollForConversion(&hadc1, 10);
+    if (HAL_ADC_GetState(&hadc1) & HAL_ADC_STATE_EOC_REG) {
+      voltage = HAL_ADC_GetValue(&hadc1);
+    }
     /* USER CODE BEGIN 3 */
   }
   /* USER CODE END 3 */
