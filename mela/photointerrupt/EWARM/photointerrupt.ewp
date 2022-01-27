@@ -1071,15 +1071,21 @@
   <group>
     <name>Drivers</name>
     <group>
+      <name>CMSIS</name>
+      <file>
+        <name>$PROJ_DIR$/../Src/system_stm32f4xx.c</name>
+      </file>
+    </group>
+    <group>
       <name>STM32F4xx_HAL_Driver</name>
       <file>
-        <name>$PROJ_DIR$/../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.c</name>
+        <name>$PROJ_DIR$/../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc.c</name>
       </file>
       <file>
-        <name>$PROJ_DIR$/../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c</name>
+        <name>$PROJ_DIR$/../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c</name>
       </file>
       <file>
-        <name>$PROJ_DIR$/../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.c</name>
+        <name>$PROJ_DIR$/../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_adc.c</name>
       </file>
       <file>
         <name>$PROJ_DIR$/../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c</name>
@@ -1120,11 +1126,14 @@
       <file>
         <name>$PROJ_DIR$/../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_exti.c</name>
       </file>
-    </group>
-    <group>
-      <name>CMSIS</name>
       <file>
-        <name>$PROJ_DIR$/../Src/system_stm32f4xx.c</name>
+        <name>$PROJ_DIR$/../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.c</name>
+      </file>
+      <file>
+        <name>$PROJ_DIR$/../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c</name>
+      </file>
+      <file>
+        <name>$PROJ_DIR$/../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.c</name>
       </file>
     </group>
   </group>
