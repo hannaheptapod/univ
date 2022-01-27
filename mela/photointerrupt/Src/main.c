@@ -47,7 +47,7 @@ UART_HandleTypeDef huart2;
 /* USER CODE BEGIN PV */
 uint16_t vol = 0;
 uint16_t mx = 0;
-uint8_t mn = 4095;
+uint16_t mn = 4095;
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
