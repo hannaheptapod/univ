@@ -13,7 +13,7 @@
         <MemConfigValue>C:\Program Files\IAR Systems\Embedded Workbench 9.0\arm\CONFIG\debugger\ST\STM32F401RE.ddf</MemConfigValue>
     </PlDriver>
     <DebugChecksum>
-        <Checksum>4188241218</Checksum>
+        <Checksum>2980280071</Checksum>
     </DebugChecksum>
     <Exceptions>
         <StopOnUncaught>_ 0</StopOnUncaught>

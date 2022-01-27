@@ -89,7 +89,7 @@ int main(void)
   MX_GPIO_Init();
   MX_USART2_UART_Init();
   /* USER CODE BEGIN 2 */
-  int data[1];
+  uint8_t data[1];
   /* USER CODE END 2 */
 
   /* Infinite loop */
@@ -97,8 +97,10 @@ int main(void)
   while (1)
   {
     HAL_UART_Receive(&huart2, data, 1, 100);
-    if (data[0] == 1) HAL_GPIO_WritePin(GPIOA, GPIO_PIN_5, GPIO_PIN_SET);
-    else if (data[0] == 0) HAL_GPIO_WritePin(GPIOA, GPIO_PIN_5, GPIO_PIN_RESET);
+    if (data[0] == '1') HAL_GPIO_WritePin(GPIOA, GPIO_PIN_5, GPIO_PIN_SET);
+    else if (data[0] == '0') HAL_GPIO_WritePin(GPIOA, GPIO_PIN_5, GPIO_PIN_RESET);
+    HAL_Delay(100);
+    HAL_UART_Transmit(&huart2, data, 1, 100);
     HAL_Delay(100);
     /* USER CODE END WHILE */
 
