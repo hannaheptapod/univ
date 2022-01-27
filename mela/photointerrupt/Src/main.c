@@ -46,8 +46,8 @@ UART_HandleTypeDef huart2;
 
 /* USER CODE BEGIN PV */
 uint16_t vol = 0;
-uint16_t cnt = 0;
-uint8_t flag = 0;
+uint16_t mx = 0;
+uint8_t mn = 4095;
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -105,8 +105,8 @@ int main(void)
     HAL_ADC_Start(&hadc1);
     HAL_ADC_PollForConversion(&hadc1, 10);
     vol = HAL_ADC_GetValue(&hadc1);
-    if (vol > 2048 && !flag) flag = 1;
-    else if (vol <= 2048 && flag) {cnt++; flag = 0;}
+    if (vol > mx) mx = vol;
+    else if (vol < mn) mn = vol;
     HAL_ADC_Stop(&hadc1);
     /* USER CODE END WHILE */
 
